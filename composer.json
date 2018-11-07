@@ -1,0 +1,13 @@
+{
+    "name": "rakib/e-commerce-project",
+    "description": "E-commerceProject",
+    "authors": [
+        {
+            "name": "rakibul alam",
+            "email": "limonrakib05690@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
