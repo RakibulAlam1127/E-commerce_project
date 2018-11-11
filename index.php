@@ -1,5 +1,7 @@
 <?php
 
+use App\Controllers\HomeController;
+use App\Controllers\UsersController;
 use Phroute\Phroute\Dispatcher;
 use Phroute\Phroute\Exception\HttpMethodNotAllowedException;
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
@@ -10,9 +12,8 @@ use Phroute\Phroute\RouteParser;
 require_once 'vendor/autoload.php';
 
 $router = new RouteCollector(new RouteParser());
-$router->get('/',function(){
-  return 'Hello i am php index page';
-});
+$router->controller('/',HomeController::class);
+$router->controller('/user',UsersController::class);
 
 $dispatcher = new Dispatcher($router->getData());
 $url = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
