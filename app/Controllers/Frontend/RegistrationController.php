@@ -1,6 +1,6 @@
 <?php
- namespace App\Controllers;
-
+ namespace App\Controllers\Frontend;
+ use App\Controllers\Controllers;
  class RegistrationController extends Controllers {
 
      public function getIndex()

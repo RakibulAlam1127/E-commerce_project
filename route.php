@@ -1,10 +1,10 @@
 <?php
  //Using NameSpace
-use App\Controllers\DashboardController;
-use App\Controllers\HomeController;
+use App\Controllers\Backend\DashboardController;
+use App\Controllers\Frontend\HomeController;
 use App\Controllers\ProductController;
-use App\Controllers\RegistrationController;
-use App\Controllers\UsersController;
+use App\Controllers\Frontend\RegistrationController;
+use App\Controllers\Frontend\UsersController;
 
 
 

@@ -1,6 +1,6 @@
 <?php
- namespace App\Controllers;
-
+ namespace App\Controllers\Frontend;
+ use App\Controllers\Controllers;
  class HomeController extends Controllers {
 
      public function getIndex()

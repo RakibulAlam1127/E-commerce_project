@@ -1,16 +1,41 @@
 <?php
 
-use App\Controllers\DashboardController;
-use App\Controllers\HomeController;
-use App\Controllers\UsersController;
+//use App\Controllers\DashboardController;
+//use App\Controllers\HomeController;
+//use App\Controllers\UsersController;
 use Phroute\Phroute\Dispatcher;
 use Phroute\Phroute\Exception\HttpMethodNotAllowedException;
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\RouteParser;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 
 require_once 'vendor/autoload.php';
+
+//Database connection
+$capsule = new Capsule();
+$capsule->addConnection([
+    'driver'    => 'mysql',
+    'host'      => 'localhost',
+    'database'  => 'e-commerceproject',
+    'username'  => 'root',
+    'password'  => '',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+]);
+
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+$users = Capsule::table('users')->get();
+echo '<pre>';
+var_dump($users);
+echo '</pre>';
+die();
+
+
 
 $router = new RouteCollector(new RouteParser());
 require_once 'route.php';
