@@ -1,11 +1,12 @@
 <?php
  namespace App\Controllers;
- class HomeController{
 
- public function getIndex()
+ class HomeController extends Controllers {
+
+     public function getIndex()
  {
-     return 'This in Home Page';
+    $this->view('home');
  }
 
-   
+
  }

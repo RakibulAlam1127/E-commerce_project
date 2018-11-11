@@ -1,10 +1,10 @@
 <?php
   namespace App\Controllers;
-  class UsersController{
+  class UsersController extends Controllers {
 
       public function getIndex()
       {
-          return 'This is the User Page';
+          $this->view('login');
       }
 
   }

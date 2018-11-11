@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\DashboardController;
 use App\Controllers\HomeController;
 use App\Controllers\UsersController;
 use Phroute\Phroute\Dispatcher;
@@ -12,9 +13,7 @@ use Phroute\Phroute\RouteParser;
 require_once 'vendor/autoload.php';
 
 $router = new RouteCollector(new RouteParser());
-$router->controller('/',HomeController::class);
-$router->controller('/user',UsersController::class);
-
+require_once 'route.php';
 $dispatcher = new Dispatcher($router->getData());
 $url = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 $url = str_replace('E-commerceProject', '', $url);

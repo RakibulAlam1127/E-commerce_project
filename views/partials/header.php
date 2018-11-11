@@ -9,13 +9,13 @@
     <title>Album example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <!--    <script src="../asstes/js/jquery.min.js"></script>-->
     <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="../asstes/fonts/all.min.css">
+    <link rel="stylesheet" href="asstes/fonts/all.min.css">
     <!-- Custom styles for this template -->
-    <link href="../asstes/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="../asstes/css/cart.css">
+    <link href="asstes/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="asstes/css/cart.css">
 
 </head>
 

@@ -12,16 +12,16 @@
     <title>Admin - Dashboard</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- Custom fonts for this template-->
-    <link href="../asstes/fonts/all.min.css" rel="stylesheet" type="text/css">
+    <link href="asstes/fonts/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Page level plugin CSS-->
-    <link href="../asstes/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="asstes/css/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../asstes/css/sb-admin.css" rel="stylesheet">
+    <link href="asstes/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
