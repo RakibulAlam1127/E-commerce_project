@@ -285,17 +285,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "1.34.1",
-        "version_normalized": "1.34.1.0",
+        "version": "1.34.4",
+        "version_normalized": "1.34.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "19201b87f7dba2a7cbf1cccdf0e1da13c04ee9c9"
+            "reference": "b9a444d829c9a16735aceca1b173e765745bcc0c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/19201b87f7dba2a7cbf1cccdf0e1da13c04ee9c9",
-            "reference": "19201b87f7dba2a7cbf1cccdf0e1da13c04ee9c9",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/b9a444d829c9a16735aceca1b173e765745bcc0c",
+            "reference": "b9a444d829c9a16735aceca1b173e765745bcc0c",
             "shasum": ""
         },
         "require": {
@@ -303,10 +303,13 @@
             "symfony/translation": "~2.6 || ~3.0 || ~4.0"
         },
         "require-dev": {
-            "friendsofphp/php-cs-fixer": "~2",
             "phpunit/phpunit": "^4.8.35 || ^5.7"
         },
-        "time": "2018-11-08T13:33:47+00:00",
+        "suggest": {
+            "friendsofphp/php-cs-fixer": "Needed for the `composer phpcs` command. Allow to automatically fix code style.",
+            "phpstan/phpstan": "Needed for the `composer phpstan` command. Allow to detect potential errors."
+        },
+        "time": "2018-11-13T08:26:10+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -553,6 +556,71 @@
             "psr",
             "psr-16",
             "simple-cache"
+        ]
+    },
+    {
+        "name": "respect/validation",
+        "version": "1.1.29",
+        "version_normalized": "1.1.29.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Respect/Validation.git",
+            "reference": "f8c90fa36859ca41c766efcf0c476d58913a7767"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Respect/Validation/zipball/f8c90fa36859ca41c766efcf0c476d58913a7767",
+            "reference": "f8c90fa36859ca41c766efcf0c476d58913a7767",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4",
+            "symfony/polyfill-mbstring": "^1.2"
+        },
+        "require-dev": {
+            "egulias/email-validator": "~1.2 || ~2.1",
+            "mikey179/vfsstream": "^1.5",
+            "phpunit/phpunit": "~4.0",
+            "symfony/validator": "~2.6.9",
+            "zendframework/zend-validator": "~2.3"
+        },
+        "suggest": {
+            "egulias/email-validator": "Strict (RFC compliant) email validation",
+            "ext-bcmath": "Arbitrary Precision Mathematics",
+            "ext-mbstring": "Multibyte String Functions",
+            "friendsofphp/php-cs-fixer": "Fix PSR2 and other coding style issues",
+            "symfony/validator": "Use Symfony validator through Respect\\Validation",
+            "zendframework/zend-validator": "Use Zend Framework validator through Respect\\Validation"
+        },
+        "time": "2018-11-04T21:58:45+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Respect\\Validation\\": "library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Respect/Validation Contributors",
+                "homepage": "https://github.com/Respect/Validation/graphs/contributors"
+            }
+        ],
+        "description": "The most awesome validation engine ever created for PHP",
+        "homepage": "http://respect.github.io/Validation/",
+        "keywords": [
+            "respect",
+            "validation",
+            "validator"
         ]
     },
     {

@@ -1,8 +1,6 @@
 <?php
 
-//use App\Controllers\DashboardController;
-//use App\Controllers\HomeController;
-//use App\Controllers\UsersController;
+
 use Phroute\Phroute\Dispatcher;
 use Phroute\Phroute\Exception\HttpMethodNotAllowedException;
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
@@ -12,7 +10,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 
 require_once 'vendor/autoload.php';
-
+session_start();
 //Database connection
 $capsule = new Capsule();
 $capsule->addConnection([
@@ -29,19 +27,14 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-$users = Capsule::table('users')->get();
-echo '<pre>';
-var_dump($users);
-echo '</pre>';
-die();
-
-
+$users = Capsule::table('users')->first();
 
 $router = new RouteCollector(new RouteParser());
 require_once 'route.php';
 $dispatcher = new Dispatcher($router->getData());
 $url = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 $url = str_replace('E-commerceProject', '', $url);
+
 //die(parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
 
 try{

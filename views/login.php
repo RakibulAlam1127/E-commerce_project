@@ -20,20 +20,21 @@
             <div class="card card-signin my-5">
                 <div class="card-body">
                     <h5 class="card-title text-center">Sign In</h5>
-                    <form class="form-signin" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                     <?php require_once 'partials/_notification.php'; ?>
+                    <form class="form-signin" action="login" method="post">
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
                             <label for="inputEmail">Email address</label>
                         </div>
 
                         <div class="form-label-group">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                             <label for="inputPassword">Password</label>
                         </div>
 
                         <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
                         <hr class="my-4">
-                        <a href="registration.php">Have no account? please Sign Up</a>
+                        <a href="register">Have no account? please Sign Up</a>
                     </form>
                 </div>
             </div>

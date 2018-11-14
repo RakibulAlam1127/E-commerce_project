@@ -17,6 +17,10 @@ class ComposerStaticInite10ea824011a05e1b590a607cc87fd70
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Translation\\' => 30,
         ),
+        'R' => 
+        array (
+            'Respect\\Validation\\' => 19,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
@@ -49,6 +53,10 @@ class ComposerStaticInite10ea824011a05e1b590a607cc87fd70
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Respect\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/respect/validation/library',
         ),
         'Psr\\SimpleCache\\' => 
         array (
