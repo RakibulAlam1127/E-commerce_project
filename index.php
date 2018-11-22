@@ -24,6 +24,8 @@ $capsule->addConnection([
     'prefix'    => '',
 ]);
 
+define('BASE_URL','http://localhost/E-commerceProject/');
+
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 

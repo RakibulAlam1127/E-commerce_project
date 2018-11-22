@@ -11,12 +11,12 @@
 
      public function getIndex():void
  {
-    $this->view('home');
+    view('home');
  }
 
   public function getRegister():void
   {
-      $this->view('register');
+      view('register');
   }
 
      /**
@@ -99,8 +99,8 @@
                //Content
                $mail->isHTML(true);                                  // Set email format to HTML
                $mail->Subject = 'Your Registration is Successfully!';
-               $mail->Body    = 'Dear ! '.$username.' Please Click the following link to active Your account<br>
-                <a target="_blank" href="localhost/E-commerceProject/activate/'.$token.'">Click Here to Active</a>';
+               $mail->Body    = 'Hey ! '.$username.' Please Click the following link to active Your account<br>
+                <a target="_blank" href="http://localhost/E-commerceProject/active/'.$token.'">Click Here to Active</a>';
                $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                $mail->send();
@@ -126,11 +126,14 @@
 
    public function getLogin():void
    {
-       $this->view('login');
+       view('login');
 
    }
 
-   public function postLogin():void
+     /**
+      *
+      */
+     public function postLogin():void
    {
        $errors = [];
        $validator = new Validator();
@@ -148,6 +151,11 @@
          if ($user){
              if (password_verify($password,$user->password)){
                  $_SESSION['success'] = 'Log in Successfully';
+                 $_SESSION['user'] = [
+                     'id' => $user->id,
+                     'email' => $user->email,
+                     'username' => $user->username
+                 ];
                   header('Location:dashboard');
                   exit();
              }
@@ -163,7 +171,7 @@
    }
 
 
-   /*public function getActive($token = '')
+   public function getActive($token = '')
    {
        $errors = [];
        if (empty($token)){
@@ -192,9 +200,15 @@
        header('Location:login');
        exit();
    }
-   */
 
 
+   public function getLogout()
+   {
+       unset($_SESSION['user']);
+       $_SESSION['success'] = 'Log Out Successfully';
+       header('Location:login');
+       exit();
+   }
 
 
 

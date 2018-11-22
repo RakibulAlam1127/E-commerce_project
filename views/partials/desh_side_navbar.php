@@ -1,26 +1,26 @@
 <ul class="sidebar navbar-nav">
     <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php">
+        <a class="nav-link" href="<?php echo BASE_URL;?>dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link" href="#" >
+        <a class="nav-link" href="<?php echo BASE_URL;?>dashboard/category" >
             <i class="fas fa-fw fa-users"></i>
-            <span>Add Employees</span>
+            <span>Add Categories</span>
         </a>
     </li>
 
     <li class="nav-item dropdown">
-        <a class="nav-link" href="#" >
+        <a class="nav-link" href="<?php echo BASE_URL;?>dashboard/product" >
             <i class="fas fa-fw fa-user"></i>
-            <span>View Employees</span>
+            <span>Add Products</span>
         </a>
     </li>
 
     <li class="nav-item dropdown">
-        <a class="nav-link" href="#" >
+        <a class="nav-link" href="<?php echo BASE_URL;?>dashboard/product/view" >
             <i class="fas fa-fw fa-folder"></i>
             <span>View Products</span>
         </a>

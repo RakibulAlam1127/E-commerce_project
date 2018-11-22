@@ -6,6 +6,6 @@ namespace App\Controllers\Backend;
 
      public function getIndex()
      {
-         $this->view('dashboard');
+       view('backend/dashboard/index');
      }
  }
